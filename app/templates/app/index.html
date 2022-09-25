@@ -1,0 +1,20 @@
+{% extends "app/temp_all.html" %}
+
+{% block anything %}
+
+{% for el in news_search %}
+
+    <div class="card text-white bg-secondary mb-3" style="">
+        <h5 class="card-header">{{el.title}}</h5>
+        <div class="card-body" style="padding: 10px">
+            <div class="headCard">
+                <a href="{% url 'news-detail' el.id %}" class="btn btn-outline-light">Read more..</a>
+                <p class="card-title">{{el.date}}</p>
+            </div>
+        </div>
+    </div>
+
+{% endfor %}
+
+
+{% endblock %}

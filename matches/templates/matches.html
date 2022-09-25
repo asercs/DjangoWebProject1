@@ -1,0 +1,37 @@
+{% extends "app/temp_all.html" %}
+
+{% block anything %}
+
+
+<h1 style="text-align: center">{{matches.tournamentName}}</h1>
+<hr>
+<div class="row">
+    <div class="col-4 d-flex justify-content-center"><h2 class="card-title">{{matches.team_1}}</h2></div>
+    <div class="col-4 d-flex justify-content-center"><h2 class="card-title">—</h2></div>
+    <div class="col-4 d-flex justify-content-center"><h2 class="card-title">{{matches.team_2}}</h2></div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-12 d-flex justify-content-center"><h2 class="card-title">Map: {{matches.map}}</h2></div>
+    <br>
+    <div class="col-12 d-flex justify-content-center"><img src="
+            {% if matches.map == 'de_mirage' %}
+                https://steamuserimages-a.akamaihd.net/ugc/986758574027939625/6DD752040B7CBE030DA69886D6A33A4C6AE6B583/
+            {% elif matches.map == 'de_dust2' %}
+                https://steamuserimages-a.akamaihd.net/ugc/986758574027943302/B973615FD95BAE17BFD217A0245B6C5572599AB5/
+            {% elif matches.map == 'de_train' %}
+                https://uploads-ssl.webflow.com/5d5ab0de3f2789196e87264e/5f7665cf57079bf8788fc0e1_train_simpleradar_800x800.jpg
+            {% elif matches.map == 'de_vertigo' %}
+                https://external-preview.redd.it/s2AUnmOVHR9sf-vd4gPOcP-ZFWw_2vdI0xutscbP6GA.jpg?auto=webp&s=afb8923e292c5242b1bb0bc827ca5b3874a2c2c6
+            {% elif matches.map == 'de_overpass' %}
+                https://steamuserimages-a.akamaihd.net/ugc/986758574027948566/6CD293E6BFE4E89516D4A2ED8154BB53F02E1290/
+            {% elif matches.map == 'de_nuke' %}
+                https://steamuserimages-a.akamaihd.net/ugc/986758574027946425/50ED2C56FDAA6D6994FF93783B91B4F62BEA8FE9/
+            {% else %}
+                https://steamuserimages-a.akamaihd.net/ugc/986758574027937316/80C06A7B45FF960938E3BA3A94317E18AFEF5C68/
+            {% endif %}
+            " alt="" style="width: 80%"></h2></div>
+</div>
+
+
+{% endblock %}

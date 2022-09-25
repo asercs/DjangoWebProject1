@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+a, p, span, div {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select {
+    max-width: 280px;
+}
+
+
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+p, h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.headCard a,
+.headCard h4
+.headCard p {
+    margin: 0px;
+    display: inline-block;
+    padding: 0.3em;
+    vertical-align: top;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.headCard a {
+    padding: 5px 15px;
+}
+
+.headCard p {
+    text-align: right;
+    padding-right: 2em;
+    float: right;
+}
+
+.card-img-overlay h4{
+    position: absolute;bottom: 25px;left: 20px;color: white;margin: 0;font-family: 'Montserrat';
+}
+.card-img-overlay h5{
+    position: absolute;bottom: 5px;left: 20px;color: white;margin: 0;font-family: 'Montserrat';
+}
+
+td{
+    width: 20%;
+}
+
+.list-group-item {
+    padding: 12px;
+}
+
+#tour .list-group-item {
+    white-space: nowrap; /* �������� ������� ������ */
+    overflow: hidden; /* �������� ���������� */
+    text-overflow: ellipsis; /* ���������� */
+}
+
+#tour .list-group-item:hover {
+    white-space: normal; /* ������� ������� ������ */
+}
+
+#navbarSupportedContent a:hover{
+    color: green;
+}
+.nav-item a {
+    font-size: 18px;
+}
+

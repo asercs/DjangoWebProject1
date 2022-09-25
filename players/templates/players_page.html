@@ -1,0 +1,33 @@
+{% extends "app/temp_all.html" %}
+
+{% block anything %}
+
+<div class="row">
+{% for el in players %}
+
+  <div class="col-md-4">
+    <div class="card text-white bg-secondary mb-3">
+      <div class="card-header">{{ el.nickname }}</div>
+      <div class="card-body" style="padding: 8px">
+        <div class="card-title"><img src="
+          {% if el.photo %}
+            {{el.photo}}
+          {% else %}
+            https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-2.png
+          {% endif %}
+          " alt="" width="100%" style="height: 175px; object-fit: cover">
+        <div class="text-block" style="position: absolute; bottom: 19%; left: 4%; background-color: rgba(0, 0, 0, 0.6);">
+          <span style="font-weight: bold">{{el.firstName}} {{el.secondName}}</span>
+          <br>
+          <span style="font-weight: bold">Age: {{el.age}}</span>
+        </div>
+        </div>
+        <a href="{% url 'players:players' el.nickname %}" class="btn btn-outline-light d-flex justify-content-center">Profile</a>
+      </div>
+    </div>
+  </div>
+
+{% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,112 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="card bg-dark text-white">
+        <img src="https://pbs.twimg.com/profile_images/1350448618227048461/vOygBnic_400x400.jpg"
+             class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h4 class="card-title, player_week">Player of the week</h4>
+          <h5 class="card-text , player_week">GeT_RiGhT</h5>
+        </div>
+      </div>
+      <br>
+      <span>RANKING</span>
+      <ol class="list-group list-group-numbered">
+        <li class="list-group-item">
+          &nbsp;<img src="https://upload.wikimedia.org/wikipedia/ru/thumb/2/2c/NAVI_logo.png/1200px-NAVI_logo.png"
+               alt="" height="24px">
+          &nbsp;Natus Vincere
+        </li>
+        <li class="list-group-item">
+          &nbsp;<img src="https://upload.wikimedia.org/wikipedia/ru/9/91/Astralis_logo.png" alt="" height="24px">
+          &nbsp;Astralis
+        </li>
+        <li class="list-group-item">
+          &nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Gambit_Esports_2020_logo.svg/1200px-Gambit_Esports_2020_logo.svg.png"
+               alt="" height="24px">
+          &nbsp;Gambit
+        </li>
+        <li class="list-group-item">
+          &nbsp;<img src="https://upload.wikimedia.org/wikipedia/ru/4/4f/Virtus.proLogo.png" alt="" height="24px">
+          &nbsp;Virtus Pro
+        </li>
+        <li class="list-group-item">
+          &nbsp;<img src="https://svirtus.cdnvideo.ru/8DgQKbgE5XONnFDrDvoMlzjaL4g=/0x0:600x599/200x200/filters:quality(100)/https://hb.bizmrg.com/esports-core-media/85/85404106894b7242dcec29e9430cdbf7.png?m=39d37451678763811b1b48776166a2e3"
+               alt="" height="24px">
+          &nbsp;Team Liquid
+        </li>
+      </ol>
+      <br>
+      <span>TOURNAMENTS</span>
+      <ul class="list-group" id="tour">
+        <li class="list-group-item">
+          <img src="https://img.championat.com/tournir/16122301241598288923.png"
+               alt="" height="24px">
+          Blast Premier Showdown
+        </li>
+        <li class="list-group-item">
+          <img src="https://egamersworld.com/uploads/tournaments/iem-katowice-2018-logo-1.png" alt="" height="24px">
+          &nbsp;IEM Katowice 2021
+        </li>
+        <li class="list-group-item">
+          <img src="https://pinger.kz/storage/files/a459a481cf2ef615418be3d6297313a2.png"
+               alt="" height="24px">
+          &nbsp;Alaman Qualifications #1
+        </li>
+        <li class="list-group-item">
+          <img src="https://pinger.kz/storage/files/a459a481cf2ef615418be3d6297313a2.png" alt="" height="24px">
+          &nbsp;Alaman Qualifications #2
+        </li>
+        <li class="list-group-item">
+          <img src="https://img.championat.com/tournir/16122301241598288923.png"
+               alt="" height="24px">
+          Blast Premier London
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      {% block anything %}{% endblock %}
+    </div>
+    <div class="col-md-4">
+      <div class="card-group">
+        <div class="card">
+          <img src="https://pinger.kz/storage/files/a459a481cf2ef615418be3d6297313a2.png" class="card-img-top"
+               alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Alaman Cup #1</h5>
+            <p class="card-text">First qualifications</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">21.04.2021</small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://pinger.kz/storage/files/a459a481cf2ef615418be3d6297313a2.png" class="card-img-top"
+               alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Alaman Cup #2</h5>
+            <p class="card-text">Second qualifications</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">24.04.2021</small>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="card bg-dark text-white">
+        <a href="https://play.google.com/store/apps/details?id=com.android.chrome&hl=ru&gl=US">
+        <img src="https://thumbs.dreamstime.com/z/download-our-new-mobile-app-application-vector-blank-design-download-our-new-mobile-app-129550555.jpg"
+             class="card-img" alt="...">
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+{% endblock %}

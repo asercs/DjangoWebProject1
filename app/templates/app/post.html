@@ -1,0 +1,43 @@
+{% extends "app/temp_all.html" %}
+
+{% block anything %}
+    <div style="padding: 25px">
+    <h2>{{article.title}}</h2>
+    <p>{{article.date}}</p>
+    <hr>
+    <p style="margin: 0px 15px">{{article.news_text|linebreaks}}</p>
+
+
+    </div>
+
+<div class="section">
+    <div class="container">
+        <form method="POST" action="{{ post }}">
+            {% csrf_token %}
+            <div class="formSection">
+                {{form}}
+            </div>
+            <button class="btn btn-primary btn-block col-12" type="submit" style="margin-top: 10px">Comment</button>
+        </form>
+        <hr>
+        <h2>Comments({{post_comments_count}})</h2>
+
+        <div class="row">
+            <div class="col-12" style="word-wrap:break-word">
+                    {% for comment in post_comments %}
+                        <div class="comment col-12">
+                            <div class="commentInfo">
+                                <b> {{comment.user}}</b>
+                                <time style="opacity: 70%"> {{comment.date}}</time>
+                            </div>
+                            <p> {{comment.content}}</p>
+                        </div>
+
+                    {% endfor %}
+                </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

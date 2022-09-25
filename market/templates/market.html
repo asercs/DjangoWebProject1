@@ -1,0 +1,35 @@
+{% extends "app/temp_all.html" %}
+
+{% block anything %}
+
+<h1 style="text-align: center">{{market.weaponName}}</h1>
+<h2 style="text-align: center">{{market.skinName}}</h2>
+<hr>
+<div class="row">
+  <div class="col-5 my-auto">
+    <h5>Condition: {{market.condition}}</h5>
+    <h5>Float: {{market.float}}</h5>
+    <h5>Seller: {{market.seller}}</h5>
+  </div>
+  <div class="col-7 d-flex justify-content-center">
+    {% if market.photo %}
+    <img src="{{market.photo}}" alt="" style="width: 70%">
+    {% else %}
+    <img src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PLJTjtO7dGzh7-HnvD8J4Tdl3lW7Yt1jriVpY-migfh8hBtZTqgcI7Aewc2MgnWqwW-k-zph569uZyfnHMwpGB8slBfgSNs/360fx360f" alt="" width="70%">
+    {% endif %}
+  </div>
+
+  <hr>
+  <div class="col-12 d-flex justify-content-start" style="align-items: center">
+      <div class="col-5 d-flex justify-content-start">
+        <h4>Цена:&nbsp;</h4><h4 style="color: #85bb65">{{market.price}}</h4>
+      </div>
+      <div class="col-7 d-flex justify-content-end">
+        <a href="{{market.seller_url}}" class="btn btn-success">Buy</a>
+      </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "app/temp_all.html" %}
+
+{% block anything %}
+
+<div class="row">
+  {% for el in market %}
+  <div class="col-md-4">
+    <div class="card text-white bg-secondary mb-4">
+      <div class="card-header" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{el.weaponName}} - {{el.skinName}}</div>
+      <div class="card-body">
+        <div class="row">
+          {% if el.photo %}
+          <div class="col-12 d-flex justify-content-center"><h5 class="card-title"><img src="{{el.photo}}" alt="" width="100%"></h5></div>
+          {% else %}
+          <div class="col-12 d-flex justify-content-center"><h5 class="card-title"><img src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PLJTjtO7dGzh7-HnvD8J4Tdl3lW7Yt1jriVpY-migfh8hBtZTqgcI7Aewc2MgnWqwW-k-zph569uZyfnHMwpGB8slBfgSNs/360fx360f" alt="" width="100%"></h5></div>
+          {% endif %}
+
+
+          <div class="col-12 d-flex justify-content-center"><h5 class="card-title">{{el.price}}</h5></div>
+        </div>
+        <hr>
+        <div class="headCard">
+          <a href="{% url 'market:market' el.id %}" class="btn btn-success">Buy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

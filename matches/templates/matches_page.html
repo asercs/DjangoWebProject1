@@ -1,0 +1,27 @@
+{% extends "app/temp_all.html" %}
+
+{% block anything %}
+
+<div class="row">
+  {% for el in matches %}
+  <div class="col-md-12">
+    <div class="card text-white bg-secondary mb-3">
+      <div class="card-header">{{el.tournamentName}}</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4 d-flex justify-content-center"><h5 class="card-title">{{el.team_1}}</h5></div>
+          <div class="col-4 d-flex justify-content-center"><h5 class="card-title">—</h5></div>
+          <div class="col-4 d-flex justify-content-center"><h5 class="card-title">{{el.team_2}}</h5></div>
+        </div>
+        <hr>
+        <div class="headCard">
+        <p class="card-title">{{el.date}} GMT</p>
+        <a href="{% url 'matches:matches' el.id %}" class="btn btn-outline-light">Check match</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

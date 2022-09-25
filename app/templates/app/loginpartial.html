@@ -1,0 +1,23 @@
+{% if user.is_authenticated %}
+<form id="logoutForm" action="/logout/" method="post" class="navbar-nav me-auto mb-2 mb-lg-0 align-self-center">
+    {% csrf_token %}
+    <div class="dropdown nav navbar-nav navbar-right align-self-center" style="padding-left: 10px">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ user.username }}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a href="javascript:document.getElementById('logoutForm').submit()" class="nav-link active" >Log off</a></li>
+        </ul>
+    </div>
+
+</form>
+
+{% else %}
+
+<ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" href="{% url 'login' %}">Log in</a>
+    </li>
+</ul>
+
+{% endif %}

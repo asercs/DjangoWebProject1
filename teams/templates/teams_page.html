@@ -1,0 +1,26 @@
+{% extends "app/temp_all.html" %}
+
+{% block anything %}
+
+<div class="row">
+{% for el in teams %}
+    <div class="col-md-4">
+    <div class="card text-white bg-secondary mb-3">
+        <div class="card-header">{{el.teamName}}</div>
+        <div class="card-body">
+            <img src="
+            {% if el.photo %}
+                {{el.photo}}
+            {% else %}
+                https://i.pinimg.com/originals/2a/a3/96/2aa396fd5d914d15923499ba32d5c529.png
+            {% endif %}
+            " alt="" style="object-fit: contain; max-height: 150px;" class="mx-auto d-block">
+
+            <a href="{% url 'teams:teams' el.teamName %}" class="btn btn-outline-light d-flex justify-content-center" style="margin-top: 10px">Show profile</a>
+        </div>
+    </div>
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}

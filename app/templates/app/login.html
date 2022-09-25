@@ -1,0 +1,56 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<style>
+    input{
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+</style>
+<div class="container">
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <section id="loginForm">
+            <form action="." method="post" class="form-horizontal" style="margin: 0 auto">
+                {% csrf_token %}
+                <h4 style="text-align: center">Use a local account to log in.</h4>
+                <hr />
+                <div class="form-group">
+                    <label for="id_username"></label>
+                    <div class="col-md-10" style="margin: 0 auto">
+                        {{ form.username }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="id_password"></label>
+                    <div class="col-md-10" style="margin: 0 auto">
+                        {{ form.password }}
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <div style="margin: 0 auto">
+                        <input type="hidden" name="next" value="/" />
+                        <input type="submit" value="Log in" class="w-100 btn btn-lg btn-primary" style="display: block"/>
+                    </div>
+                </div>
+                {% if form.errors %}
+                <p class="validation-summary-errors">Please enter a correct user name and password.</p>
+                {% endif %}
+            </form>
+        </section>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+
+    {% load staticfiles %}
+<script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
+
+{% endblock %}
